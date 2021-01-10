@@ -1,0 +1,26 @@
+package CUOIKY1;
+import java.util.Scanner;
+public class bbs {
+	public static boolean Check(int a) {
+		boolean kiemtra = true;
+		for(int i=2; i<=Math.sqrt(a); i++) {
+			if(a%i==0) {
+				kiemtra = false;
+				break;
+			}
+		}
+		if(kiemtra == true) {
+			System.out.printf("\t%d",a);
+		}
+		return kiemtra;
+	}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n;
+		System.out.printf("Nhap n:");
+		n = sc.nextInt();
+		for(int i=2; i<=n; i++) {
+			Check(i);
+		}
+	}
+}
