@@ -1,0 +1,23 @@
+package CUOIKY1;
+import java.util.Scanner;
+public class bt3 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n;
+		boolean kiemtra = true;
+		System.out.printf("Nhap n: ");
+		n = sc.nextInt();
+		for(int i=2; i<=n; i++) {
+			kiemtra=true;
+			for(int j=2; j<=Math.sqrt(i); j++) {
+				if(i%j==0) {
+					kiemtra=false;
+					break;
+				}
+			}
+			if(kiemtra==true) {
+				System.out.printf("\t%d",i);
+			}
+		}
+	}
+}
