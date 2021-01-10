@@ -1,0 +1,26 @@
+package ontap;
+import java.util.Scanner;
+public class shss {
+	public static void main(String[] args) {
+		// tìm số lớn nhất trong 2 số nguyên
+		Scanner sc = new Scanner(System.in);
+		int a,b,max;
+		System.out.printf("Nhap a: ");
+		a = sc.nextInt();
+		System.out.printf("Nhap b: ");
+		b = sc.nextInt();
+		max = (a>b)?a:b;
+		System.out.printf("So lon nhat la: %d", max);
+		// tìm số lớn nhất trong 3 số nguyên
+		System.out.printf("\nNhap c: ");
+		int c = sc.nextInt();
+		if(a>=b && a>=c) {
+			max = a;
+		}else if(b>a && b>c){
+			max = b;
+		}else {
+			max = c;
+		}
+		System.out.printf("So lon nhat la: %d", max);
+	}
+}
