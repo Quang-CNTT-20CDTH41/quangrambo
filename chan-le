@@ -1,0 +1,37 @@
+package CUOIKY1;
+import java.util.Scanner;
+public class BT1 {
+	public static void main(String[] args) {
+		// kiểm tra chẵn lẽ
+		Scanner sc = new Scanner(System.in);
+		int a,b;
+		String c;
+		System.out.printf("Nhap a: ");
+		a = sc.nextInt();
+		System.out.printf("Nhap b: ");
+		b = sc.nextInt();
+		// cach 1
+		c = (a%2==0)?"a la so chan":"a la so le";
+		System.out.print(c);
+		// cach 2
+		if(b%2==0) {
+			System.out.printf("\n%d la so chan",b);
+		}else {
+			System.out.printf("\n%d la so le",b);
+		}
+		// am duong - chan le
+		if(a>=0) {
+			if(a%2==0) {
+				System.out.printf("\n%d la so duong chan", a);
+			}else {
+				System.out.printf("\n%d la so duong le", a);
+			}
+		}else if(a<0) {
+			if(a%2==0) {
+				System.out.printf("\n%d la so am chan", a);
+			}else {
+				System.out.printf("\n%d la so am le", a);
+			}
+		}
+	}
+}
