@@ -3,11 +3,19 @@ import java.util.Scanner;
 public class bttt {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int x,y,S;
+		int a,b;
 		System.out.printf("Nhap x: ");
-		x = sc.nextInt();
+		a = sc.nextInt();
 		System.out.printf("Nhap y: ");
-		y = sc.nextInt();
-		S = 0;
+		b = sc.nextInt();
+		if(a==0) {
+			if(b==0) {
+				System.out.printf("Phuong trinh vo so nghiem");
+			}else {
+				System.out.printf("Phuong trinh vo nghiem");
+			}
+		}else {
+			System.out.printf("Phuong trinh co 1 nghiem la: %d",(-b/a));
+		}
 	}
 }
