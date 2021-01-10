@@ -1,23 +1,26 @@
-package ontap;
+package CUOIKY1;
 import java.util.Scanner;
-public class nguyento {
+public class BT2 {
 	public static void main(String[] args) {
-		// giai so nguyen to
 		Scanner sc = new Scanner(System.in);
 		int n;
-		System.out.printf("Nhap n:");
+		boolean kiemtra = true;
+		System.out.printf("Nhap n: ");
 		n = sc.nextInt();
-		boolean k = true;
-		for(int i=2; i<=n/2; i++) {
-			if(n%i==0) {
-				k = false;
-				break;
-			}
-		}
-		if(k == true) {
-			System.out.printf("Phai");
+		if(n==1) {
+			System.out.printf("1 khong phai la so nguyen to");
 		}else {
-			System.out.printf("k Phai");
+			for(int i=2; i<=n/2; i++) {        // i chạy từ 2 đến 1 nữa n
+				if(n%i==0) {       			   // kiểm tra xem có số nào nhỏ hơn chia hết cho n ko
+					kiemtra = false;			// Nếu có thì sai
+					break;        			    // lệnh dừng lại chương trình for
+				}
+			}
+			if(kiemtra == true) {               // Nếu đúng thì in ra số nguyên tố
+				System.out.printf("%d la so nguyen to",n);
+			}else {                             // ngược lại thì không phải
+				System.out.printf("%d khong phai la so nguyen to",n);
+			}
 		}
 	}
 }
