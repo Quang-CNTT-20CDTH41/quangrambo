@@ -1,0 +1,13 @@
+package ontap;
+import java.util.Scanner;
+public class bttt {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int x,y,S;
+		System.out.printf("Nhap x: ");
+		x = sc.nextInt();
+		System.out.printf("Nhap y: ");
+		y = sc.nextInt();
+		S = 0;
+	}
+}
