@@ -1,0 +1,23 @@
+package ontap;
+import java.util.Scanner;
+public class nguyento {
+	public static void main(String[] args) {
+		// giai so nguyen to
+		Scanner sc = new Scanner(System.in);
+		int n;
+		System.out.printf("Nhap n:");
+		n = sc.nextInt();
+		boolean k = true;
+		for(int i=2; i<=n/2; i++) {
+			if(n%i==0) {
+				k = false;
+				break;
+			}
+		}
+		if(k == true) {
+			System.out.printf("Phai");
+		}else {
+			System.out.printf("k Phai");
+		}
+	}
+}
