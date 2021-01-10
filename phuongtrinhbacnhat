@@ -4,10 +4,11 @@ public class bttt {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int a,b;
-		System.out.printf("Nhap x: ");
+		System.out.printf("Nhap a: ");
 		a = sc.nextInt();
-		System.out.printf("Nhap y: ");
+		System.out.printf("Nhap b: ");
 		b = sc.nextInt();
+		float d = (float)-b/a;
 		if(a==0) {
 			if(b==0) {
 				System.out.printf("Phuong trinh vo so nghiem");
@@ -15,7 +16,7 @@ public class bttt {
 				System.out.printf("Phuong trinh vo nghiem");
 			}
 		}else {
-			System.out.printf("Phuong trinh co 1 nghiem la: %d",(-b/a));
+			System.out.printf("Phuong trinh co 1 nghiem la: %f",d);
 		}
 	}
 }
