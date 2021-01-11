@@ -4,6 +4,7 @@ public class ss {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n,s;
+		System.out.printf("Nhap n: ", args)
 		n = sc.nextInt();
 		boolean ktra=false;
 		for(int i=1; i<=n;i++) {
@@ -19,4 +20,3 @@ public class ss {
 		}
 	}
 }
-  
