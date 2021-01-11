@@ -1,0 +1,22 @@
+package CUOIKY1;
+import java.util.Scanner;
+public class ss {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n,s;
+		n = sc.nextInt();
+		boolean ktra=false;
+		for(int i=1; i<=n;i++) {
+			s = i*i;
+			if(s==n) {
+				ktra=true;
+			}
+		}
+		if(ktra==true) {
+			System.out.printf("%d la so chinh phuong",n);
+		}else {
+			System.out.printf("%d ko phai la so chinh phuong",n);
+		}
+	}
+}
+  
