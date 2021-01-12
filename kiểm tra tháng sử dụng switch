@@ -1,0 +1,50 @@
+package CUOIKY1;
+import java.util.Scanner;
+public class bt3a {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n,s =0;
+		System.out.printf("Nhap thang ban muon kiem tra: ");
+		n = sc.nextInt();
+		switch(n) {
+		case 1: 
+			System.out.printf("Thang 1 thuoc quy 1 trong nam");
+			break;
+		case 2: 
+			System.out.printf("Thang 2 thuoc quy 1 trong nam");
+			break;
+		case 3: 
+			System.out.printf("Thang 3 thuoc quy 1 trong nam");
+			break;
+		case 4: 
+			System.out.printf("Thang 4 thuoc quy 2 trong nam");
+			break;
+		case 5: 
+			System.out.printf("Thang 5 thuoc quy 2 trong nam");
+			break;
+		case 6: 
+			System.out.printf("Thang 6 thuoc quy 2 trong nam");
+			break;
+		case 7: 
+			System.out.printf("Thang 7 thuoc quy 3 trong nam");
+			break;
+		case 8: 
+			System.out.printf("Thang 8 thuoc quy 3 trong nam");
+			break;
+		case 9: 
+			System.out.printf("Thang 9 thuoc quy 3 trong nam");
+			break;
+		case 10: 
+			System.out.printf("Thang 10 thuoc quy 4 trong nam");
+			break;
+		case 11: 
+			System.out.printf("Thang 11 thuoc quy 4 trong nam");
+			break;
+		case 12: 
+			System.out.printf("Thang 12 thuoc quy 4 trong nam");
+			break;
+			default:
+				System.out.printf("Thang khong hop le");
+		}
+	}
+}
