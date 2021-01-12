@@ -1,0 +1,41 @@
+package CUOIKY1;
+import java.util.Scanner;
+public class ssssssss {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int x,y;
+		System.out.printf("Nhap x: ");
+		x = sc.nextInt();
+		System.out.printf("Nhap y: ");
+		y = sc.nextInt();
+		System.out.printf("Nhap + - * /:  ");
+		String pheptoan = sc.next();
+		switch(pheptoan) {
+		case "+": 
+			x = x + y;
+			System.out.printf("ket qua x %s y: %d",pheptoan,x);
+			break;
+		case "-": 
+			x = x - y;
+			System.out.printf("ket qua x %s y: %d",pheptoan,x);
+			break;
+		case "*": 
+			x = x * y;
+			System.out.printf("ket qua x %s y: %d",pheptoan,x);
+			break;
+		case "/": {
+			if(y==0 || x==0) {
+				System.out.printf("Khong chia duoc");
+				break;
+			}else {
+				x = x / y;
+				System.out.printf("ket qua x %s y: %d",pheptoan,x);
+				break;
+			}
+		}
+		default:
+			System.out.printf("Nhập sai định dạng");
+			break;
+		}
+	}
+}
