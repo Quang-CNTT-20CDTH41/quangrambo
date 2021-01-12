@@ -1,0 +1,22 @@
+package CUOIKY1;
+import java.util.Scanner;
+public class bt3a {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n,s =0;
+		
+		do {
+			System.out.printf("Nhap thang ban muon kiem tra: ");
+			n = sc.nextInt();
+		}while(n<=0 || n>12);
+		if(n<=3) {
+			System.out.printf("thang %d thuoc quy 1 trong nam", n);
+		}else if(n<=6) {
+			System.out.printf("thang %d thuoc quy 2 trong nam", n);
+		}else if(n<=9) {
+			System.out.printf("thang %d thuoc quy 3 trong nam", n);
+		}else {
+			System.out.printf("thang %d thuoc quy 4 trong nam", n);
+		}
+	}
+}
