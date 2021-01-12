@@ -1,0 +1,15 @@
+package CUOIKY1;
+import java.util.Scanner;
+public class bt3a {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n,s =0;
+		System.out.printf("Nhap n: ");
+		n = sc.nextInt();
+		for(int i=1; i<=n; i++) {
+			s += Math.pow(i,i);
+		}
+		System.out.printf("Ket qua la : %d",s);
+		// 1+2^2+3^3+...+n^n;
+	}
+}
