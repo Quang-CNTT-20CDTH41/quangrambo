@@ -1,0 +1,73 @@
+package CUOIKY1;
+import java.util.Scanner;
+public class aa {
+	public static int[][] Nhapmang(int a,int b){        // nhâp mảng
+		Scanner sc = new Scanner(System.in);
+		int [][] M = new int[a][b];
+		for(int i=0; i<a; i++) {
+			for(int j=0; j<b; j++) {
+				System.out.printf("Nhap [%d][%d]: ",i,j);
+				M[i][j] = sc.nextInt();
+			}
+		}
+		return M;
+	}
+	public static void Xuatmang(int[][] N) {      // xuất mảng
+		for(int i=0; i<N.length; i++) {
+			for(int j=0; j<N[i].length; j++) {
+				System.out.printf("\t%d",N[i][j]);
+			}
+			System.out.printf("\n");
+		}
+	}
+	public static int Tinhtong(int[][] Q,int b, int c) {          // tổng mảng
+		int a = 0;
+		for(int i=0; i<Q.length; i++) {
+			for(int j=0; j<Q[i].length; j++) {
+			a += Q[i][j]; 
+			}
+		}
+		System.out.printf("\t%d",a);
+		return a;
+	}
+	public static void Phantram(int[][] I) {             // các số lẽ
+		int a=0;
+		System.out.printf("\nHiển thị các số lẽ: ");
+		for(int i=0; i<I.length; i++) {
+			for(int j=0; j<I[i].length; j++) {
+				if(I[i][j]%2!=0) {
+					System.out.printf("\t%d",I[i][j]);
+					a+=1;
+				}
+			}
+		}
+		System.out.printf("\nCó %d số là số lẽ",a);
+	}
+	public static void Tongmang(int[][] A, int[][] B, int[][]C){
+		for(int i=0; i<A.length; i++) {
+			for(int j=0; j<A[i].length; j++) {
+				A[i][j] = B[i][j]+C[i][j];
+				System.out.printf("\t%d", A[i][j]);
+			}
+			System.out.printf("\n");
+		}
+	}
+	public static void main(String[] args) {
+		int m=3,n=3;
+		int[][] E = new int[m][n];
+		System.out.printf("Nhap Mảng A: \n");
+		int[][] M = Nhapmang(m,n);
+		System.out.printf("Nhap Mảng B: \n");
+		int[][] N = Nhapmang(m,n);
+		System.out.printf("Xuat Mảng A: \n");
+		Xuatmang(M);
+		System.out.printf("Xuat Mảng B: \n");
+		Xuatmang(N);
+		System.out.printf("\nTổng mảng A: ");
+		Tinhtong(M,m,n);
+		Phantram(M);
+		System.out.printf("\nTổng của A+B:\n");
+		Tongmang(E,M,N);
+//		
+	}
+}
