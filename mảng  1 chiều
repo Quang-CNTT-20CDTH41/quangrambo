@@ -1,0 +1,53 @@
+package codelearn;
+import java.util.Scanner;
+public class quanglz {
+	public static int [] nhapmang(int m) {                //hàm nhập mảng
+		Scanner sc = new Scanner(System.in);
+		int M[] = new int[m];
+		for(int i=0;i<m;i++) {
+			System.out.printf("Nhap[%d]: ",i);
+			M[i]= sc.nextInt();
+		}
+		return M;
+	} 
+	public static void xuatmang(int S[],int s) {                        // hàm xuất mảng
+		for(int i=0;i<s;i++) {
+			System.out.printf("\t%d", S[i]);
+		}
+	}
+	public static int[] Tongmang(int[] N, int[] M, int[] K,int a) {         // hàm tổng mảng A + B
+		for(int i=0; i<a;i++) {
+			K[i] = M[i] + N[i];
+			System.out.printf("\t%d", K[i]);
+		}
+		return K;
+	}   
+	public static void SapXep(int[] A,int u) {                 // hàm sắp xếp theo vị trí tăng dần
+		for(int i=0; i<u; i++) {
+			for(int j=i+1; j<u; j++) {
+				if(A[i]>A[j]) {
+					int tam = A[i];
+					A[i] = A[j];
+					A[j] = tam;
+				}
+			}
+			System.out.printf("\t%d", A[i]);
+		}
+	}
+	public static void main(String[] args) {
+		int i = 5;
+		int[] C = new int[i];
+		System.out.printf("Nhập mảng A: \n");       
+		int[] A = nhapmang(i);                            // gọi hàm tạo mảng A
+		System.out.printf("Nhập mảng B: \n");
+		int[] B = nhapmang(i);                                // gọi hàm tạo mảng B
+		System.out.printf("Xuất mảng A: \n");
+		xuatmang(A,i);                                     // gọi hàm xuất mảng A
+		System.out.printf("Xuất mảng B: \n");
+		xuatmang(B,i);                                    // gọi hàm xuất mảng B
+		System.out.printf("\nMảng C=A+B: \n");              
+		Tongmang(A,B,C,i);                              // gọi hàm tổng mảng A + B
+		System.out.printf("\nSắp xếp C: \n");      
+		SapXep(C,i);                                     // gọi hàm sắp xếp vị trí trong mảng
+	}
+}
