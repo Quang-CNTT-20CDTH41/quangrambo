@@ -1,0 +1,65 @@
+package codelearn;
+import java.util.Scanner;
+public class hinhtamgiac {
+	public static void giamdan(int b) {
+		for(int number2 = b; number2 >= 1; number2--) {
+			for(int h=1; h<=number2; h++) {
+				System.out.printf("* ");
+			}
+			System.out.printf("\n");
+		}
+	}
+	public static void Tamgiaccc(int e) {
+		while(e>=1) {
+			for(int a=1; a<=e; a++) {
+				System.out.printf("* ");
+			}
+			System.out.printf("\n");
+			e--;
+		}
+	}
+	public static void Tamgiac(int n) {
+		int number = 1;
+		while(number<=n) {
+			for(int i=1;i<=number;i++) {
+				System.out.printf("* ");
+			}
+			System.out.println();
+			number++;
+		}
+	}
+	public static void Tamgiaccan(int a) {
+		int number1 = 1;
+		for(int k=1; k<=a; k++) {
+			for(int l=1; l<=a-k; l++) {
+				System.out.printf(" ");
+			}
+			for(int j=1; j<=k; j++) {
+				System.out.printf("* ");
+			}
+			System.out.println();
+		}
+	}
+	public static void Tamgiacnguoc(int a) {
+		int number1 = 1;
+		for(int k=1; k<=a; k++) {
+			for(int l=1; l<=a-k; l++) {
+				System.out.printf("  ");
+			}
+			for(int j=1; j<=k; j++) {
+				System.out.printf("* ");
+			}
+			System.out.println();
+		}
+	}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.printf("Nhap n: ");
+		int n = sc.nextInt();
+		giamdan(n);System.out.printf("\n");
+		Tamgiac(n);System.out.printf("\n");
+		Tamgiaccan(n);System.out.printf("\n");
+		Tamgiacnguoc(n);System.out.printf("\n");
+		Tamgiaccc(n);
+	}	
+}
