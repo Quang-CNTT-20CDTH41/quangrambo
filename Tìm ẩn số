@@ -1,0 +1,33 @@
+package quang;
+
+import java.util.Scanner;
+
+public class BT1 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		// secret Number
+		final int MAX_NUMBER, MIN_NUMBER;
+		MAX_NUMBER = 100; 
+		MIN_NUMBER = 1;
+		int range = (MAX_NUMBER - MIN_NUMBER) + 1;
+		int secretNumber = (int) (Math.random()*range)+MIN_NUMBER;
+		// Input Number
+		int yourNumber = 0;
+		int score = 0;
+		while(secretNumber != yourNumber) {
+			System.out.print("Your's Number (1-100): ");
+			yourNumber = sc.nextInt();
+			if(yourNumber > secretNumber) {
+				System.out.printf("Greater than!\n"); // lớn hơn
+			}else if(yourNumber < secretNumber) {
+				System.out.printf("Less than!\n");    // bé hơn
+			}else {
+				System.out.printf("Successfull\n");
+			}
+			score++;
+		}
+		sc.close();
+		System.out.printf("Score: %d",score);
+	}
+}
