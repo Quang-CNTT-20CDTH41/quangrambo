@@ -1,0 +1,58 @@
+package VD;
+import java.text.DecimalFormat;
+import java.util.Scanner;
+public class QUANG {
+	public static void main(String[]args) {
+		Scanner sc = new Scanner(System.in);
+		DecimalFormat formatter = new DecimalFormat("#,###"); // dấu chấm phẩy
+		final int A,B,C,D,E,F;
+		int a,b,c,d,e,f;
+		int money = 0;
+		A = 500000;
+		B = 200000;
+		C = 100000;
+		D = 50000;
+		E = 20000;
+		F = 10000;
+		a = 0;
+		b = 0;
+		c = 0;
+		d = 0;
+		e = 0;
+		f = 0;
+		do {
+			System.out.printf("Your's money: ");
+			money = sc.nextInt();
+		}while(money % F != 0);
+		if(money >= A) {
+			a = money / A;      // 800.000 / 500.000 = 1         số tờ
+			money = money % A;   // 800.000 % 500.000 = 300.000      số tiền dư
+			System.out.printf("Mệnh giá %s: %d\n",formatter.format(A),a);
+		}
+		if(money >= B) {
+			b = money / B;      
+			money = money % B;  
+			System.out.printf("Mệnh giá %s: %d\n",formatter.format(B),b);
+		}
+		if(money >= C) {
+			c = money / C;      
+			money = money % C;  
+			System.out.printf("Mệnh giá %s: %d\n",formatter.format(C),c);
+		}
+		if(money >= D) {
+			d = money / D;      
+			money = money % D;  
+			System.out.printf("Mệnh giá %s: %d\n",formatter.format(D),d);
+		}
+		if(money >= E) {
+			e = money / E;      
+			money = money % E;  
+			System.out.printf("Mệnh giá %s: %d\n",formatter.format(E),e);
+		}
+		if(money >= F) {
+			f = money / F;      
+			money = money % F;  
+			System.out.printf("Mệnh giá %s: %d\n",formatter.format(F),f);
+		}
+	}
+}
